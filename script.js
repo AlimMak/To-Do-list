@@ -30,7 +30,6 @@ function createList(arg) {
     document.getElementById("taskList").appendChild(listItem);
     
     }
-    //taskArray = [];
 }
 
 function addToArray(){
@@ -73,7 +72,6 @@ function loadTodoList(arrayKey){
     } else{
         taskArray = [];
     }
-   // createList(taskArray);
    return taskArray;
 }
 
