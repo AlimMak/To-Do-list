@@ -1,9 +1,3 @@
-
-
-
-
-
-
 console.log("Script loaded....")
 const addTask = document.getElementById("addTaskButton");
 const clearArray = document.getElementById("clearListButton");
@@ -28,9 +22,10 @@ function createList(arg) {
     const taskSpan = document.createElement("span");
     taskSpan.textContent = arg[i];
 
-    const deleteIt = document.createElement("button");
-    deleteIt.classList.add("removeToDo");
-    deleteIt.textContent = "remove";
+    const deleteIt = document.createElement("i");
+    deleteIt.className = ("removeToDo fa-solid fa-trash fa-2x");
+   // deleteIt.classList.add("removeToDo");
+    //deleteIt.textContent = "remove";
     deleteIt.addEventListener("click", removeToDo);
     
     listItem.appendChild(deleteIt);

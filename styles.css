@@ -4,8 +4,13 @@
     color: rgb(255, 255, 255, 0.81);
     background-color: rgb(25, 25, 25);
     font-family: "Roboto Mono";
-    align-items: flex-start;
+    align-items: center;
     gap: 10px
+}
+
+ul{
+    list-style-type: none;
+    align-items: center;
 }
 
 h1 {
@@ -21,8 +26,6 @@ input{
     text-align: center;
     resize: both;
     overflow: auto;
-
-    
 }
 button{
     border-radius: 15px;
@@ -38,12 +41,15 @@ button{
     padding: 8px; 
     box-sizing: border-box; 
     max-height: 500px;
+    background-color: rgb(25, 25, 25);
+    color: rgb(255, 255, 255, 0.81);
 }
 
 .taskClass{
     color: rgb(255, 255, 255, 0.81);
     background-color: rgb(25, 25, 25);
     font-family: "Roboto Mono";
+    
 }
 
 body{
@@ -54,15 +60,20 @@ body{
 
 .removeToDo {
     align-items: baseline;
-    width: 10%;
-    font-family: "Roboto Mono";
-    background-color: rgb(255, 77, 77);
-    margin-right: 15px;
+    width: auto;
     border: none;
-  }
+}
+
+.fa-trash{
+    color: rgb(255, 77, 77);
+    height: 50px;
+    margin-right: 15px;
+}
+
+
 
 .removeToDo:hover{
-    background-color: rgb(235, 105, 105);
+    color: rgb(235, 105, 105);
     transition: 0.8s;
     cursor: pointer;
 }
@@ -70,6 +81,9 @@ body{
 #addTaskButton {
     background-color: rgb(76, 175, 80);
     border: none;
+    font-size: 20px;
+    width: 15%;
+    font-family: "Roboto Mono";
 }
 
 #addTaskButton:hover{
@@ -82,10 +96,26 @@ body{
     background-color: rgb(235, 77, 77);
     transition: 0.8s;
     border:none;
+    font-size: 20px;
+    width: 15%;
+    font-family: "Roboto Mono";
 }
 
 #clearListButton:hover{
     background-color: rgb(235, 105, 105);
     transition: 0.8s;
     cursor: pointer;
+}
+
+#taskList{
+    background-color: rgb(25, 25, 25);
+}
+
+.taskClass #taskList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+    flex-direction: column;
+
 }
