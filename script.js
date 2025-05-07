@@ -1,3 +1,9 @@
+
+
+
+
+
+
 console.log("Script loaded....")
 const addTask = document.getElementById("addTaskButton");
 const clearArray = document.getElementById("clearListButton");
@@ -39,6 +45,8 @@ function addToArray(){
     document.getElementById("taskInput").value = null;
     console.log(taskArray);
     createList(taskArray)
+    document.querySelector('.autoresize').dispatchEvent(new Event('input'));
+
 }
 }
 
@@ -84,3 +92,17 @@ function validateTask(arg){
         return true;
     }
 }
+
+document.querySelector('.autoresize').addEventListener('input', function(){
+    this.style.height = 'auto';
+    const maxHeight = 500; // set the max height the same as the one I put in css
+    // set the height to the scrollbar and cap once at maxHeight
+    this.style.height = Math.min(this.scrollHeight, maxHeight) + "px";
+    // if scrollHeight > maxHeight then show scrollbar if not then keep it hidden
+    this.style.overflowY = this.scrollHeight > maxHeight ? "auto" : "hidden";
+});
+
+// Add this after the event listener
+document.querySelector('.autoresize').dispatchEvent(new Event('input'));
+
+

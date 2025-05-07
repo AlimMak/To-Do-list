@@ -1,0 +1,53 @@
+.top-half{
+    display:flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255, 0.81);
+    background-color: rgb(25, 25, 25);
+    font-family: "Roboto Mono";
+    align-items: flex-start;
+    gap: 10px
+}
+
+h1 {
+    font-size: 75px;
+    text-align: center;
+
+  }
+
+input{
+    min-height: 20px;
+    min-width: 100px;
+    border-radius: 15px;
+    text-align: center;
+    resize: both;
+    overflow: auto;
+
+    
+}
+button{
+    border-radius: 15px;
+    width: 50%;
+    
+}
+
+.autoresize {
+    resize: none;
+    overflow-y: hidden; /* Need this or auto resize won't work */
+    min-height: 40px;
+    width: 50%;
+    padding: 8px; 
+    box-sizing: border-box; 
+    max-height: 500px;
+}
+
+.taskClass{
+    color: rgb(255, 255, 255, 0.81);
+    background-color: rgb(25, 25, 25);
+    font-family: "Roboto Mono";
+}
+
+body{
+    color: rgb(255, 255, 255, 0.81);
+    background-color: rgb(25, 25, 25);
+    font-family: "Roboto Mono";
+}
