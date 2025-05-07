@@ -51,3 +51,41 @@ body{
     background-color: rgb(25, 25, 25);
     font-family: "Roboto Mono";
 }
+
+.removeToDo {
+    align-items: baseline;
+    width: 10%;
+    font-family: "Roboto Mono";
+    background-color: rgb(255, 77, 77);
+    margin-right: 15px;
+    border: none;
+  }
+
+.removeToDo:hover{
+    background-color: rgb(235, 105, 105);
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+#addTaskButton {
+    background-color: rgb(76, 175, 80);
+    border: none;
+}
+
+#addTaskButton:hover{
+    background-color: rgb(115, 206, 118);
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+#clearListButton{
+    background-color: rgb(235, 77, 77);
+    transition: 0.8s;
+    border:none;
+}
+
+#clearListButton:hover{
+    background-color: rgb(235, 105, 105);
+    transition: 0.8s;
+    cursor: pointer;
+}

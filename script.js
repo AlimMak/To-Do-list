@@ -22,16 +22,20 @@ function createList(arg) {
     list.innerHTML = ""; 
     
     for (let i = 0; i < arg.length; i++){
+
+        
     const listItem = document.createElement("li");
     const taskSpan = document.createElement("span");
     taskSpan.textContent = arg[i];
 
     const deleteIt = document.createElement("button");
+    deleteIt.classList.add("removeToDo");
     deleteIt.textContent = "remove";
     deleteIt.addEventListener("click", removeToDo);
-
-    listItem.appendChild(taskSpan);
+    
     listItem.appendChild(deleteIt);
+    listItem.appendChild(taskSpan);
+    
 
     document.getElementById("taskList").appendChild(listItem);
     
