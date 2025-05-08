@@ -22,13 +22,17 @@ function createList(arg) {
     const taskSpan = document.createElement("span");
     taskSpan.textContent = arg[i];
 
+    const checkbx = document.createElement("input");
+    checkbx.type = "checkbox";
+    checkbx.className = "completedcheckbox";
+    checkbx.addEventListener("change", crossOut);
+
     const deleteIt = document.createElement("i");
     deleteIt.className = ("removeToDo fa-solid fa-trash fa-2x");
-   // deleteIt.classList.add("removeToDo");
-    //deleteIt.textContent = "remove";
     deleteIt.addEventListener("click", removeToDo);
     
     listItem.appendChild(deleteIt);
+    listItem.appendChild(checkbx);
     listItem.appendChild(taskSpan);
     
 
@@ -90,6 +94,13 @@ function validateTask(arg){
     }else{
         return true;
     }
+}
+
+function crossOut(){
+    const listElement = this.parentNode;
+    const textToCross = listElement.querySelector('span').textContent;
+    textToCross.style.textDecoration = "line-through";
+    listElement.querySelector('span').textContent = textToCross;
 }
 
 document.querySelector('.autoresize').addEventListener('input', function(){

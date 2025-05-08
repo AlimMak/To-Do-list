@@ -56,6 +56,7 @@ body{
     color: rgb(255, 255, 255, 0.81);
     background-color: rgb(25, 25, 25);
     font-family: "Roboto Mono";
+    
 }
 
 .removeToDo {
@@ -117,5 +118,21 @@ body{
     margin: 0;
     margin-top: 100px;
     flex-direction: column;
+    background-color: rgb(25, 25,25);
+}
 
+/* Style the checkbox */
+.completedcheckbox {
+    margin-right: 10px; /* Space between checkbox and text */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: rgb(76, 175, 80); /* Changes checkbox color */
+    resize: none;
+}
+
+/* Style the checked state */
+.completedcheckbox:checked + span {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.5); /* Optional: Fade out completed tasks */
 }
