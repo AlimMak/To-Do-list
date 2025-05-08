@@ -39,6 +39,9 @@ li {
     margin-top: 15px;
     display: flex;
     align-self: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
 }
 
 
@@ -167,3 +170,13 @@ body{
     margin: 5px 0;
 }
 
+.drag-handle{
+    cursor: grab;
+    margin-left: auto;
+    padding-left: 10px;
+}
+
+.dragging {
+    opacity: 0.5;
+    background-color: rgb(136, 136, 136);
+}
